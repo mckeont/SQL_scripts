@@ -1149,7 +1149,6 @@ cross join lateral
  --in the United States in the ne_110m_populated_places layer 
  --to its five nearest cities in any country. List the cities 
  --and distances in the output.
-
   select a.name as US_city, c.name, ST_Distance(a.geom, c.geom)
   from natural_earth.ne_110m_populated_places as a
   cross join lateral
